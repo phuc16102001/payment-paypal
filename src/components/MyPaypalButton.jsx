@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
+import { Spin } from "antd";
 
 const MyPaypalButton = (props) => {
   const amount = props.amount || 1;
@@ -27,7 +28,7 @@ const MyPaypalButton = (props) => {
   };
 
   const onCancel = (data, actions) => {
-    alert("User has cancel the transaction");
+    alert("User has cancelled the transaction");
   };
 
   useEffect(() => {
@@ -43,7 +44,7 @@ const MyPaypalButton = (props) => {
   return (
     <>
       {isPending ? (
-        <div>Hello</div>
+        <Spin tip="Loading..." size="large"/>
       ) : (
         <PayPalButtons
           createOrder={createOrder}

@@ -21,14 +21,14 @@ function App() {
 
   return (
     <div className='gradient-bg w-screen min-h-screen flex justify-center items-center'>
-      <div className='p-4 rounded-xl min-h-5/6 w-1/2 bg-white my-2'>
+      <div className='p-4 rounded-xl w-1/2 bg-white my-2'>
         <div className='text-3xl'>Paypal payment</div>
         <hr className='my-2' />
         <div>
           <div className='text-2xl my-2'>Amount</div>
           <InputNumber
             decimalSeparator='.'
-            min={0}
+            min={0.01}
             step={0.01}
             addonAfter={currency}
             value={amount}
@@ -41,7 +41,7 @@ function App() {
             <Option value="AUD">Australian dollar</Option>
           </Select>
         </div>
-        <div className='my-2 h-full w-full justify-center items-center flex'>
+        <div className='mt-5 h-full w-full justify-center items-center flex'>
           <PayPalScriptProvider options={{ "client-id": config.PAYPAL_CLIENT_ID }}>
             <MyPaypalButton
               currency={currency}
