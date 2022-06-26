@@ -39,7 +39,7 @@ const MyPaypalButton = (props) => {
         currency: currency,
       },
     });
-  }, [currency]);
+  }, [currency, amount]);
 
   return (
     <>
