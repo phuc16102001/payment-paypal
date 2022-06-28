@@ -43,15 +43,12 @@ const MyPaypalButton = (props) => {
 
   return (
     <>
-      {isPending ? (
-        <Spin tip="Loading..." size="large"/>
-      ) : (
-        <PayPalButtons
-          createOrder={createOrder}
-          onApprove={onApprove}
-          onCancel={onCancel}
-        />
-      )}
+      {isPending && <Spin tip="Loading..." size="large" />}
+      <PayPalButtons
+        createOrder={createOrder}
+        onApprove={onApprove}
+        onCancel={onCancel}
+      />
     </>
   );
 };
