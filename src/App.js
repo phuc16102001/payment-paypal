@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className='gradient-bg w-screen min-h-screen flex justify-center items-center'>
-      <div className='p-4 rounded-xl w-1/2 bg-white my-2'>
+      <div className='p-4 rounded-xl w-1/2 bg-white my-2 shadow-xl'>
         <div className='text-3xl'>Paypal payment</div>
         <hr className='my-2' />
         <div>
